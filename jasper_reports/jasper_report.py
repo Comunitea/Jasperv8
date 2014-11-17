@@ -202,7 +202,6 @@ class Report:
         return tools.config['db_user'] or self.pool['ir.config_parameter'].get_param(self.cr, self.uid, 'db_user') or self.systemUserName()
 
     def password(self):
-        
         return tools.config['db_password'] or self.pool['ir.config_parameter'].get_param(self.cr, self.uid, 'db_password') or ''
 
     def executeReport(self, dataFile, outputFile, subreportDataFiles):
@@ -242,7 +241,7 @@ class report_jasper(report.interface.report_int):
         else:
             if name in openerp.report.interface.report_int._reports:
                 del openerp.report.interface.report_int._reports[name]
-#             openerp.report.interface.report_int._reports[name] = 
+#             openerp.report.interface.report_int._reports[name] =
         super(report_jasper, self).__init__(name)
         self.model = model
         self.parser = parser
