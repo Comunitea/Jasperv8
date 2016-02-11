@@ -74,7 +74,6 @@ class Report:
         of the generated report.
         """
         logger = logging.getLogger(__name__)
-
         # * Get report path *
         # Not only do we search the report by name but also ensure that 'report_rml' field
         # has the '.jrxml' postfix. This is needed because adding reports using the <report/>

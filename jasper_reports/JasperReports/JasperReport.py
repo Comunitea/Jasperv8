@@ -248,11 +248,11 @@ class JasperReport:
                 'report': subreport,
                 'depth': 1,
             })
-            for subsubInfo in subreport.subreports():
+            for subsubInfo in self._subreports:
                 subsubInfo['depth'] += 1
                 # Note hat 'parameter' (the one used to pass report's DataSource) must be
                 # the same in all reports
-                self._subreports.append( subsubInfo )
+                # self._subreports.append( subsubInfo )
 
         # Dataset
         # Here we expect the following structure in the .jrxml file:
