@@ -179,9 +179,11 @@ class report_xml(osv.Model):
         language = context.get('lang')
         if language == 'en_US':
             language = False
-
         # Then add all fields in alphabetical order
+        print modelName
         model = pool.get(modelName)
+        print model
+        print "***********************"
         fields = model._columns.keys()
         fields += model._inherit_fields.keys()
         # Remove duplicates because model may have fields with the
@@ -194,7 +196,7 @@ class report_xml(osv.Model):
                 name = pool.get('ir.translation')._get_source(cr, uid, modelName + ',' + field, 'field', language)
             if not name:
                 # If there's not description in user's language, use default (english) one.
-                if field  in model._columns.keys():
+                if field in model._columns.keys():
                     name = model._columns[field].string
                 else:
                     name = model._inherit_fields[field][2].string
