@@ -248,11 +248,11 @@ class JasperReport:
                 'report': subreport,
                 'depth': 1,
             })
-            for subsubInfo in self._subreports:
+            for subsubInfo in subreport.subreports():
                 subsubInfo['depth'] += 1
                 # Note hat 'parameter' (the one used to pass report's DataSource) must be
                 # the same in all reports
-                # self._subreports.append( subsubInfo )
+                self._subreports.append( subsubInfo )
 
         # Dataset
         # Here we expect the following structure in the .jrxml file:
@@ -328,6 +328,7 @@ class JasperReport:
                 'pathPrefix': pathPrefix,
                 'report': dataset,
                 'filename': 'DATASET',
+                'depth': 1,
             })
 
 # vim:noexpandtab:smartindent:tabstop=8:softtabstop=8:shiftwidth=8:
