@@ -34,9 +34,9 @@
     "version" : "8.0.1.0.0",
     "description" : '''
     This module integrates Jasper Reports with OpenERP. V6 and v7 compatible version was made by NaN-tic.
-    Serpent Consulting Services Pvt Ltd has migrated it to v8.
+    Serpent Consulting Services Pvt. Ltd. has migrated it to v8.
     Comunitea has migrated it to Java 7 and updated jasper server version, now is compatible with new iReport versions''',
-    "author" : "NaN·tic, Serpent Consulting Services Pvt Ltd, Comunitea",
+    "author" : "NaN·tic, Serpent Consulting Services Pvt. Ltd., Comunitea",
     "website" : "http://www.nan-tic.com, http://www.serpentcs.com, http://www.comunitea.com",
     'images' : [
         'images/jasper_reports-hover.png',
